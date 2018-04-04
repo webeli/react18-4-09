@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "webpack": "3.10.0"
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "copystatic": "cp -r assets dist/assets && cp template.html dist/index.html",
+    "full": "npm run clean && npm run copystatic && npm run build",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  }
+}
